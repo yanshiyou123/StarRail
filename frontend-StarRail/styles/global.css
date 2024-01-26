@@ -17,6 +17,9 @@ h1 {
   text-decoration: none;
 }
 .row{
+  margin-left: 10px;
   display: flex;
+  flex-wrap: wrap;
 }
+
 

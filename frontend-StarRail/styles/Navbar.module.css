@@ -1,48 +1,84 @@
 .navbar {
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    align-items: center;
-  }
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem; /* Increased padding for better spacing */
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Smooth scaling transition */
+}
+
+.navbar .logo:hover {
+  transform: scale(1.03); /* Slightly enlarge logo on hover */
+}
+
+.navbar .logo p {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* Ensure text is white for contrast */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+}
+
+.navbar .logo .logoImage {
+  margin-right: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff; /* White border around the logo image */
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.navbar .logo .logoImage:hover {
+  transform: rotate(360deg); /* Rotate logo image on hover */
+}
+
+.navbar ul {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+  position: relative; /* Needed for the after pseudo-element */
+}
+
+.navbar ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #fff;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li:hover::after {
+  width: 100%; /* Underline effect on hover */
+}
+
+.navbar ul li a {
   
-  .navbar .logo {
-    display:flex;
-    margin-left: 10px;
-    margin-right: auto;
-    align-items: center;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .navbar .logo .logoImage {
-    margin-right: 15px;
-    width:80px;
-    height:80px;
-    border-radius: 50%; 
-  }
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar ul li {
-    margin-left: 20px;
-    cursor: pointer;
-  }
-  
-  .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar ul li a:hover {
-    color: #ddd;
-  }
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ddd;
+}
+
 
   
